@@ -1,0 +1,13 @@
+.clipTop:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: -1px;
+  padding-top: 0.81%;
+}
+
+.clipTop:after {
+  background-image: url(/images/clip-top.svg);
+  border-top: 1px solid #fff;
+}

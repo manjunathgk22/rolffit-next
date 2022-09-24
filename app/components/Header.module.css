@@ -1,0 +1,49 @@
+.headerwrapper:before {
+  background-image: url(/images/block_clipping_hero.svg);
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  z-index: 20;
+  padding-top: 0.81%;
+}
+.headerwrapper:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.highlighbottomline {
+  position: relative;
+  display: inline-block;
+}
+
+.highlighbottomline:before {
+  background-image: url(/images/line_green.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: "";
+  display: block;
+  padding-top: 3.82%;
+  position: absolute;
+  -webkit-transform: translateY(75%);
+  transform: translateY(75%);
+  width: 100%;
+}
+
+.highlighbottomline.pink:before {
+  background-image: url(/images/line_pink.svg);
+}
+
+.highlighbottomline.blue:before {
+  background-image: url(/images/line_blue.svg);
+}
+
+.whitesvg path {
+  fill: #fff;
+}

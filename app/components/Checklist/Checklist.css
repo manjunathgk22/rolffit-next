@@ -1,0 +1,53 @@
+.CheckList[data-v-ed816bee] {
+  margin: 0;
+  margin-bottom: -30px;
+  list-style-type: none;
+  padding: 0;
+  /* color: #5a6564; */
+}
+
+.CheckList__title[data-v-ed816bee] {
+  color: #272727;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.3em;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.CheckList__text[data-v-ed816bee] {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.38em;
+  /* color: #5a6564; */
+  margin: 0;
+}
+
+.CheckList__wrapper[data-v-ed816bee] {
+  display: inline-block;
+  width: 100%;
+}
+
+.CheckList__item[data-v-ed816bee] {
+  padding: 0 20px 30px 45px;
+  font-size: 20px;
+  text-indent: 0;
+  position: relative;
+}
+
+.CheckList__item__number[data-v-ed816bee] {
+  font-size: 45px;
+  display: inline-block;
+  font-weight: 700;
+
+  color: #000;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: -12px;
+  z-index: 10;
+}
+.d-block {
+  display: block !important;
+}

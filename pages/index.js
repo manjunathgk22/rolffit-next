@@ -1,209 +1,89 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Script from "next/script";
+import App from "../app/App";
+import styles from "../styles/home.module.css";
 
-export default function Home() {
+export default function Home({ images }) {
+  console.log("props", images);
+
   return (
-    <div className="container">
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Boost business productivity with mini-massage breaks on office premises." />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="preload" as="image" href="/images/heroCompressed.jpeg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigi />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
+        <title>rolf.fit: An Employee Wellness Company | Introducing massage therapy</title>
+        <meta content="rolf.fit: An Employee Wellness Company | Introducing massage therapy" property="og:title" />
+        <meta content="Boost business productivity with mini-massage breaks on office premises." property="og:description" />
+        <meta property="og:url" content="https://www.rolf.fit/" />
+
+        <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate" />
+        <link rel="icon" type="image/x-icon" href="https://www.rolf.fit/favicon.ico" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "rolf.fit",
+                  url: "https://www.rolf.fit",
+                  address: "",
+                  email: "collaboration@rolf.fit",
+                  sameAs: [],
+                },
+                {
+                  "@id": "www.rolf.fit",
+                  "@type": "LocalBusiness",
+                  address: { "@type": "PostalAddress", addressCountry: "India", addressLocality: "HSR Layout", addressRegion: "Bangalore", postalCode: "560035", streetAddress: "2nd Sector HSR Layout" },
+                  alternateName: "rolf.fit",
+                  description: "Boost business productivity with mini-massage breaks on office premises",
+                  duns: "11485543",
+                  email: "collaboration@rolf.fit",
+                  founder: "Manjunath K & Gaurav Verma",
+                  foundingDate: "2022",
+                  foundingLocation: "Bangalore",
+                  name: "rolf.fit",
+                  openingHoursSpecification: [
+                    { "@type": "OpeningHoursSpecification", closes: "20:30:00", dayOfWeek: ["Monday"], opens: "12:00:00" },
+                    { "@type": "OpeningHoursSpecification", closes: "20:30:00", dayOfWeek: ["Tuesday"], opens: "12:00:00" },
+                    { "@type": "OpeningHoursSpecification", closes: "20:30:00", dayOfWeek: ["Wednesday"], opens: "12:00:00" },
+                    { "@type": "OpeningHoursSpecification", closes: "20:30:00", dayOfWeek: ["Thursday"], opens: "12:00:00" },
+                    { "@type": "OpeningHoursSpecification", closes: "20:30:00", dayOfWeek: ["Friday"], opens: "12:00:00" },
+                  ],
+                  priceRange: "$",
+                  url: "https://rolf.fit",
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      <App images={images} />
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const response = await fetch("http://api.rolf.fit/rolffit/business-partner/web/logo/");
+  const jsonResponse = await response.json();
+  return {
+    props: { images: jsonResponse?.logos },
+  };
 }

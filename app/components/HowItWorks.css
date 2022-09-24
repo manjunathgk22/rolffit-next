@@ -1,0 +1,157 @@
+.slick-dots li {
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  .slick-dots li {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+.slick-dots {
+  overflow: auto;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 768px) {
+  .slick-dots {
+    justify-content: flex-start;
+    padding: 2rem 0px 10px !important;
+  }
+}
+
+.slick-dots .slick-active .dotText {
+  /* color: red; */
+  font-weight: 800;
+  font-family: "Geomanist";
+  transition: all 0.1s;
+}
+.slider-progress {
+  transition: background-color 0.5s;
+  background-color: #2c2c2c;
+  background-color: rgba(44, 44, 44, 0.2);
+  min-width: 150px;
+  height: 2px;
+}
+
+.slick-dots .slick-active .progress {
+  animation: progressanimate 30.4s ease-out forwards;
+}
+.progress {
+  width: 0;
+  height: 2px;
+  margin-bottom: 0;
+  overflow: hidden;
+  background-color: #2c2c2c;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@keyframes progressanimate {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.slick-current .animate-left {
+  /* animation: animateLeft 1s ease-out; */
+  flex: 1;
+}
+.slick-current .animate-right {
+  /* animation: animateRight 1s ease-out; */
+  flex: 1;
+  margin-left: 2rem;
+  max-width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .slick-current .animate-left,
+  .slick-current .animate-right {
+    width: 100%;
+    /* max-width: calc(100% - 0px); */
+  }
+}
+@keyframes animateLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animateRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.wheatsvg path {
+  fill: #f9f1e4;
+}
+.wheatsvg {
+  transform: scale(1.015);
+}
+svg {
+  transform: scale(1.015);
+}
+.clipTop:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: -1px;
+  padding-top: 0.81%;
+}
+
+.clipTop:after {
+  background-image: url(/images/clip-top.svg);
+  border-top: 1px solid #fff;
+}
+
+.clipbottom:before {
+  background-image: url(/images/block_clipping_hero.svg);
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  z-index: 10;
+  padding-top: 0.81%;
+}
+
+li.bullet {
+  font-family: comfortaa;
+  list-style: none;
+  position: relative;
+  padding: 0 0 10px 20px;
+}
+
+li.bullet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
