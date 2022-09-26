@@ -41,7 +41,7 @@ export default function Header() {
   return (
     <div className=" z-40 flex items-center justify-between grow py-8 lg:justify-center lg:items-center">
       <a href="/">
-        <img src={logo.src} className={`h-auto absolute top-10 md:top-3 left-0 md:left-12 md:w-[400px] -mt-8 lg:mt-0 ${Styles.whitesvg}`} />
+        <img src={logo.src}  className={`${Styles.whitesvg} h-auto absolute top-10 left-0 -mt-8 lg:mt-0 ${Styles.whitesvg}`} />
       </a>
       <section className="MOBILE-MENU flex lg:hidden">
         <div

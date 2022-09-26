@@ -44,6 +44,27 @@
   background-image: url(/images/line_blue.svg);
 }
 
-.whitesvg path {
-  fill: #fff;
+.whitesvg {
+  max-width: 17%;
+  margin-left: 4.4rem;
+}
+
+@media (max-width: 1300px) {
+  .whitesvg {max-width: 25%; margin-left: 4.4rem;}
+}
+
+@media (max-width: 1025px) {
+  .whitesvg {max-width: 30%;  margin-left: 1.1rem;}
+}
+
+@media (max-width: 768px) {
+  .whitesvg {max-width: 40%;margin-left: 1.1rem;}
+}
+
+@media (max-width: 540px) {
+  .whitesvg {max-width: 50%;margin-left: 0.9rem;}
+}
+
+@media (max-width: 480px) {
+  .whitesvg {max-width: 60%;margin-left: 0.9rem;}
 }
