@@ -21,9 +21,11 @@ function Header() {
       </div>
       <div className={`md:text-6xl  md:max-w-[50%] w-3/4 text-white absolute lg:left-24 left-10 z-10`}>
         <h1 className="font-geomanist font-bold text-4xl lg:text-6xl mt-20">
-          mini-massage breaks in <span className={`${Styles.highlighbottomline} `}>office premises</span>
+          muscle-therapy sessions
         </h1>
-        <div className="hidden md:flex  text-2xl md:mt-8 mt-4 font-comfort">boost business productivity with stress-busting mini massage breaks on office premises.</div>
+        <h1 className="font-geomanist font-bold text-4xl lg:text-6xl">
+          in office <span className={`${Styles.highlighbottomline} `}>premises</span>
+        </h1>
         <div className="flex-col flex sm:flex-row gap-2 mt-10 md:mt-6">
           <button onClick={scrolltoHowItWorks} className="mx-3 hover:font-bold transition-all text-sm sm:text-lg lg:w-fit px-8 w-full mt-4 border-white  border-2 bg-black text-white py-2 rounded font-geomanist ml-0" type="button">
             How it works
