@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react"; // import state
-import logo from "../../public/images/logo_rolf_logo.svg";
+import logo from "../../public/images/logo_with_description.png";
 import logEvent from "../util/util";
 import Styles from "./Header.module.css";
 
@@ -41,7 +41,7 @@ export default function Header() {
   return (
     <div className=" z-40 flex items-center justify-between grow py-8 lg:justify-center lg:items-center">
       <a href="/">
-        <img src={logo.src} className={`h-auto lg:w-40 md:w-36 w-32 -mt-8 lg:mt-0 ${Styles.whitesvg}`} />
+        <img src={logo.src} className={`h-auto absolute top-10 md:top-3 left-0 md:left-12 md:w-[400px] -mt-8 lg:mt-0 ${Styles.whitesvg}`} />
       </a>
       <section className="MOBILE-MENU flex lg:hidden">
         <div
