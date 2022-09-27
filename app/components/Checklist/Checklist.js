@@ -1,6 +1,8 @@
 import React from "react";
+import useCheckDevice from "../../../hooks/useCheckDevice";
 
 function Checklist() {
+  const isMobile = useCheckDevice();
   return (
     <ul data-v-ed816bee="" className="CheckList">
       <li data-v-ed816bee="" className="CheckList__wrapper">
@@ -53,7 +55,7 @@ function Checklist() {
             avail relaxation without hampering your work schedule!
           </span>
           <span data-v-ed816bee="" className="text-sm font-comfort font-light">
-            The invoice is generated after completion of our service term. <span className="font-extrabold">Request a callback 👉🏾</span>
+            The invoice is generated after completion of our service term. <span className="font-extrabold text-sm md:text-base ">Request a callback {isMobile ? <>👇</> : <>👉</>}</span>
           </span>
         </div>
       </li>
