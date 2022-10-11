@@ -14,6 +14,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import colors from "tailwindcss/colors";
 import ReactGA4 from "react-ga4";
 import Clients from "./components/Clients";
+import logEvent from "./util/util";
 
 // const Header = lazy(() => "./components/Header");
 // const Mission = lazy(() => import("./components/Mission"));
@@ -27,6 +28,7 @@ function App({ images }) {
   const contactlg = useRef(null);
   useEffect(() => {
     ReactGA4.send({ hitType: "pageview", page: window.location.pathname });
+    logEvent({ action: "pageview" });
 
     window.addEventListener("scroll", handleScroll);
     return () => {
