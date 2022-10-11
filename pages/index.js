@@ -2,10 +2,26 @@ import Head from "next/head";
 import Script from "next/script";
 import App from "../app/App";
 import styles from "../styles/home.module.css";
+import ReactGA4 from "react-ga4";
+import { useEffect } from "react";
+import reportWebVitals from "../app/reportWebVitals";
 
 export default function Home({ images }) {
   console.log("props", images);
-
+  useEffect(() => {
+    try {
+      ReactGA4.initialize([
+        {
+          trackingId: "G-38QH77R2NN",
+          gaOptions: { debug_mode: false },
+          gtagOptions: { debug_mode: false },
+        },
+      ]);
+    } catch (err) {
+      console.error(err);
+    }
+    reportWebVitals(console.log);
+  }, []);
   return (
     <div>
       <Head>
