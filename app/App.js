@@ -15,6 +15,7 @@ import colors from "tailwindcss/colors";
 import ReactGA4 from "react-ga4";
 import Clients from "./components/Clients";
 import logEvent from "./util/util";
+import Pricing from "./components/Pricing";
 
 // const Header = lazy(() => "./components/Header");
 // const Mission = lazy(() => import("./components/Mission"));
@@ -83,6 +84,10 @@ function App({ images }) {
             <HowItWorks />
           </section>
 
+          <section id="pricing">
+            <Pricing />
+          </section>
+
           <section id="faq">
             <Accordion />
           </section>
@@ -94,10 +99,10 @@ function App({ images }) {
       </div>
 
       <div onClick={gotocontact} ref={contact} className="lg:hidden contact-banner fixed bottom-0 left-0 w-screen p-3 bg-black flex z-30 justify-center items-center opacity-0">
-        <BsFillTelephoneFill size={"1rem"} color={colors.white} /> <span className="text-white ml-4 text-lg font-geomanist tracking-wider ">Get FREE demo</span>
+        <span className="text-white ml-4 text-lg font-geomanist tracking-wider ">Get FREE demo</span>
       </div>
       <div ref={contactlg} onClick={gotocontact} className="z-40 contact-float cursor-pointer invisible flex justify-center items-center lg:visible fixed bg-black p-4 bottom-4 right-4 rounded-full opacity-0">
-        <BsFillTelephoneFill size={"1.25rem"} color={colors.white} /> <span className="text-white ml-4 text-lg font-geomanist tracking-wider">Get FREE demo</span>
+        <span className="text-white ml-4 text-lg font-geomanist tracking-wider">Get FREE demo</span>
       </div>
     </>
   );
