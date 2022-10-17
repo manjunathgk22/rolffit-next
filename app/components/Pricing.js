@@ -209,7 +209,7 @@ function Pricing() {
                     {typeof option === "string" ? (
                       <span className="font-comfort">{option}</span>
                     ) : (
-                      <span>
+                      <span className="font-comfort">
                         {option.map((opt) => (
                           <>{typeof opt === "string" ? opt : <span class="font-semibold font-geomanist">{opt.text}</span>}</>
                         ))}
