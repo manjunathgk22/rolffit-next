@@ -29,7 +29,8 @@ function Pricing() {
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 class="font-geomanist h5 sm:h4 md:h3 lg:text-6xl text-4xl font-bold text-center mb-8">plans for teams of all sizes</h2>
-          <p class="mb-5 font-light sm:text-xl font-comfort">We bring in relaxing experience at affordable prices, be it a Startup or a Large size company</p>
+          <p class="font-light sm:text-xl font-comfort">We bring in relaxing experience at <b>affordable prices</b>,</p>
+          <p class="mb-5 font-light sm:text-xl font-comfort">be it a Startup or a Large size company</p>
         </div>
         <div className="font-geomanist tracking-wide text-center text-lg mb-0 mt-2">Team size</div>
         <div class="mx-auto shadow self-center w-64  rounded-full h-10 mb-4 mt-1 flex p-1 relative items-center">
@@ -276,7 +277,7 @@ function Pricing() {
                   "Price per session: ",
                   {
                     type: "semibold",
-                    text: "₹136",
+                    text: "₹135",
                   },
                 ],
               ],
@@ -304,7 +305,7 @@ function Pricing() {
                   "Price per session: ",
                   {
                     type: "semibold",
-                    text: "₹114",
+                    text: "₹115",
                   },
                 ],
               ],
