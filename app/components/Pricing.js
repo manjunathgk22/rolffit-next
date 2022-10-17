@@ -4,15 +4,15 @@ import styles from "./Pricing.module.css";
 
 function Pricing() {
   const ref = useRef(null);
-  const [planIndex, setplanIndex] = useState(1);
+  const [planIndex, setplanIndex] = useState(2);
   const handleClick = (value) => {
     if (!ref) return;
-    if (ref.current.classList.contains("left-[123px]")) {
-      ref.current.classList.remove("left-[123px]");
-      ref.current.classList.add("left-1");
+    if (ref.current.classList.contains("right-[123px]")) {
+      ref.current.classList.remove("right-[123px]");
+      ref.current.classList.add("right-1");
     } else {
-      ref.current.classList.remove("left-1");
-      ref.current.classList.add("left-[123px]");
+      ref.current.classList.remove("right-1");
+      ref.current.classList.add("right-[123px]");
     }
 
     setplanIndex(value);
@@ -51,7 +51,7 @@ function Pricing() {
               {`< 300`}
             </button>
           </div>
-          <span ref={ref} class={`elSwitch bg-black shadow text-white flex items-center justify-center w-1/2 rounded-full h-8 transition-all top-[4px] absolute left-[123px] `}>
+          <span ref={ref} class={`elSwitch bg-black shadow text-white flex items-center justify-center w-1/2 rounded-full h-8 transition-all top-[4px] absolute right-[123px] `}>
             {planIndex === 2 ? "> 300" : "< 300"}
           </span>
         </div>
