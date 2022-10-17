@@ -4,7 +4,7 @@ import styles from "./Pricing.module.css";
 
 function Pricing() {
   const ref = useRef(null);
-  const [planIndex, setplanIndex] = useState(2);
+  const [planIndex, setplanIndex] = useState(1);
   const handleClick = (value) => {
     if (!ref) return;
     if (ref.current.classList.contains("left-[123px]")) {
@@ -33,28 +33,26 @@ function Pricing() {
         </div>
         <div className="font-geomanist tracking-wide text-center text-lg mb-0 mt-2">Team size</div>
         <div class="mx-auto shadow self-center w-64  rounded-full h-10 mb-4 mt-1 flex p-1 relative items-center">
-          <div class="w-full flex justify-center">
-            <button
-              onClick={() => {
-                handleClick(1);
-              }}
-              id="left"
-            >
-              {`< 300`}
-            </button>
-          </div>
-          <div class="w-full flex justify-center">
-            <button
-              onClick={() => {
-                handleClick(2);
-              }}
-              id="right"
-            >
+          <div class="w-full flex justify-center"
+               onClick={() => {
+                 handleClick(2);
+               }}
+               id="left">
+            <button>
               {`> 300`}
             </button>
           </div>
-          <span ref={ref} class={`elSwitch bg-indigo-600 shadow text-white flex items-center justify-center w-1/2 rounded-full h-8 transition-all top-[4px] absolute left-[123px] `}>
-            {planIndex === 1 ? "< 300" : "> 300"}
+          <div class="w-full flex justify-center"
+               onClick={() => {
+                 handleClick(1);
+               }}
+               id="right">
+            <button>
+              {`< 300`}
+            </button>
+          </div>
+          <span ref={ref} class={`elSwitch bg-black shadow text-white flex items-center justify-center w-1/2 rounded-full h-8 transition-all top-[4px] absolute left-[123px] `}>
+            {planIndex === 2 ? "> 300" : "< 300"}
           </span>
         </div>
         {/* SMALL SIZE */}
@@ -67,9 +65,6 @@ function Pricing() {
               price: "₹4,300",
               priceDesc: "/day",
               options: [
-                "Avail within 2 months",
-                "Slot booking through app",
-                "Support for both male and female therapist",
                 [
                   "Total sessions in a day: ",
                   {
@@ -84,6 +79,15 @@ function Pricing() {
                     text: "₹215",
                   },
                 ],
+                [
+                  "Avail within ",
+                  {
+                    type: "semibold",
+                    text: "2 months",
+                  },
+                ],
+                "Slot booking through app",
+                "Support for both male and female therapist",
               ],
               cta: "Contact us",
               svg: (
@@ -106,9 +110,6 @@ function Pricing() {
               price: "₹3,900",
               priceDesc: "/day",
               options: [
-                "Avail within 8 months",
-                "Slot booking through app",
-                "Support for both male and female therapist",
                 [
                   "Total sessions in a day: ",
                   {
@@ -123,6 +124,15 @@ function Pricing() {
                     text: "₹195",
                   },
                 ],
+                [
+                  "Avail within ",
+                  {
+                    type: "semibold",
+                    text: "8 months",
+                  },
+                ],
+                "Slot booking through app",
+                "Support for both male and female therapist",
               ],
               cta: "Contact us",
               svg: (
@@ -140,9 +150,6 @@ function Pricing() {
               price: "₹3,400",
               priceDesc: "/day",
               options: [
-                "Avail within 15 months",
-                "Slot booking through app",
-                "Support for both male and female therapist",
                 [
                   "Total sessions in a day: ",
                   {
@@ -157,6 +164,15 @@ function Pricing() {
                     text: "₹170",
                   },
                 ],
+                [
+                  "Avail within ",
+                  {
+                    type: "semibold",
+                    text: "15 months",
+                  },
+                ],
+                "Slot booking through app",
+                "Support for both male and female therapist",
               ],
               cta: "Contact us",
               svg: (
