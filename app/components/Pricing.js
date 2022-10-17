@@ -71,17 +71,17 @@ function Pricing() {
                 "Slot booking through app",
                 "Support for both male and female therapist",
                 [
-                  "Price per session: ",
-                  {
-                    type: "semibold",
-                    text: "₹215",
-                  },
-                ],
-                [
                   "Total sessions in a day: ",
                   {
                     type: "semibold",
                     text: "20",
+                  },
+                ],
+                [
+                  "Price per session: ",
+                  {
+                    type: "semibold",
+                    text: "₹215",
                   },
                 ],
               ],
@@ -110,17 +110,17 @@ function Pricing() {
                 "Slot booking through app",
                 "Support for both male and female therapist",
                 [
-                  "Price per session: ",
-                  {
-                    type: "semibold",
-                    text: "₹195",
-                  },
-                ],
-                [
                   "Total sessions in a day: ",
                   {
                     type: "semibold",
                     text: "20",
+                  },
+                ],
+                [
+                  "Price per session: ",
+                  {
+                    type: "semibold",
+                    text: "₹195",
                   },
                 ],
               ],
@@ -144,17 +144,17 @@ function Pricing() {
                 "Slot booking through app",
                 "Support for both male and female therapist",
                 [
-                  "Price per session: ",
-                  {
-                    type: "semibold",
-                    text: "₹170",
-                  },
-                ],
-                [
                   "Total sessions in a day: ",
                   {
                     type: "semibold",
                     text: "20",
+                  },
+                ],
+                [
+                  "Price per session: ",
+                  {
+                    type: "semibold",
+                    text: "₹170",
                   },
                 ],
               ],
