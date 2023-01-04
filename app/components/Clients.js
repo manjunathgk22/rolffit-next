@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import Slider from "react-slick";
 import useCheckDevice from "../../hooks/useCheckDevice";
 
-function Clients({ images }) {
+function Clients({ images = [] }) {
   const isMobile = useCheckDevice();
 
   const settings = useMemo(
